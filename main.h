@@ -22,8 +22,8 @@ int printf_unsigned(va_list args);
 int printf_oct(va_list val);
 int printf_hex(va_list val);
 int printf_HEX(va_list val);
-
-
+int printf_HEX_ext(unsigned int run);
+int print_exc_str(va_list val);
 
 
 

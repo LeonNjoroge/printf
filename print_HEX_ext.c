@@ -1,9 +1,11 @@
-int printf_HEX(va_list val)
+#include "main.h"
+
+
+int printf_HEX_ext(unsigned int run)
 {
   int m, cont = 0, *arr;
   unsigned int num, tmp;
 
-  num = va_arg(val, unsigned int);
   tmp = num;
 
   for (;num / 16 != 0; cont++)
