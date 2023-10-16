@@ -5,7 +5,7 @@ include "main.h"
  * Return: m
  */
 
-int _strlen(char *str)
+int _strlen(char *str);
 {
 	int m;
 	
@@ -18,7 +18,7 @@ int _strlen(char *str)
  * @str: it is a pointer for characters
  * Return: m
  */
-int _strlenc(const char *str)
+int _strlenc(const char *str);
 {
   int m;
 
