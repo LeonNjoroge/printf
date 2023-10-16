@@ -14,6 +14,8 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 int _strlen(char *str);
 int _strlenc(const char *str);
+int print_37(void);
+
 
 
 
