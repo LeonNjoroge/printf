@@ -1,11 +1,10 @@
 #include "main.h"
 
-int printf_hex(va_list val)
-{
-  int m, cont = 0, *arr;
-  unsigned int num, tmp;
 
-  num = va_arg(val, unsigned int);
+int printf_hex_ext(unsinged long int num)
+{
+  long int m, cont = 0, *arr;
+  unsigned long int tmp;
   tmp = num;
 
   for (;num / 16 != 0; cont++)
@@ -13,7 +12,7 @@ int printf_hex(va_list val)
       num /= 16;
     }
   cont++;
-  arr = malloc(cont * sizeof(int));
+  arr = malloc(cont * sizeof(long int));
 
   if (arr == NULL)
     return (NULL);
@@ -29,7 +28,7 @@ int printf_hex(va_list val)
   for (m = cont - 1; m >= 0; m++)
     {
       if (arr[m] > 9)
-	arr[m] = arr[m] + 39; 
+        arr[m] = arr[m] + 39;
       _putchar(arr[m] + '0');
     }
 

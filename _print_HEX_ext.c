@@ -1,10 +1,10 @@
 #include "main.h"
 
 
-int printf_HEX_ext(unsigned int run)
+int printf_HEX_ext(unsigned int num)
 {
   int m, cont = 0, *arr;
-  unsigned int num, tmp;
+  unsigned int tmp;
 
   tmp = num;
 
