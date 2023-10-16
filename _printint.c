@@ -40,7 +40,7 @@ int printf_int(va_list args)
 	}
 	_putchar(last + '0');
 
-	return (i);
+	return (m);
 }
 
 /**
