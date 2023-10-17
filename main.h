@@ -8,6 +8,21 @@
 #include <unistd.h>
 
 
+
+/**
+ * struct format - convert the specifiers for printf
+ * @id: output char pointer for d, i, u, o, x, X
+ * @f: pointer for conversion specifier
+ *
+ */
+
+typedef struct format
+{
+	char *id;
+	int (*f)();
+} convert_match;
+
+
 int printf_string(val_list val);
 int printf_char(va_list val);
 int _putchar(char c);
