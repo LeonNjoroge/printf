@@ -1,14 +1,16 @@
 #include "main.h"
+
 /**
  * _printf - this is a function that chooses the right function to be printed.
  * @format: it is an identifier that is used to search.
  * Return: the length and number of characters in the string.
  */
+
 int _printf(const char * const format, ...)
 {
 	convert_match m[] = {
-		{"%c", printf_char}, {"%s",printf_string},
-		{"%%", print_37}, {"%i", printf_int}, 
+		{"%c", printf_char}, {"%s", printf_string},
+		{"%%", print_37}, {"%i", printf_int},
 		{"%d", printf_dec}, {"%r", printstr_rev},
 		{"%R", print_rot13}, {"%b", printf_bin}, {"%u", printf_unsigned},
 		{"%o", printf_oct}, {"%x", printf_hex}, {"%X", printf_HEX},

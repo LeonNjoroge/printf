@@ -7,11 +7,12 @@ include "main.h"
 
 int _strlen(char *str);
 {
-	int m;
-	
-	for (m = 0; str[m] ! = 0; m++)
-			      ;
-		return (m);
+int m = 0;
+while (str[m] != 0)
+{
+m++;
+}
+return (m);
 }
 /**
  * _strlenc - for const char pointer string
@@ -20,9 +21,11 @@ int _strlen(char *str);
  */
 int _strlenc(const char *str);
 {
-  int m;
+int m = 0;
 
-	for (m = 0; str[m] ! = 0; m++)
-			      ;
-		return (m);
+while (str[m] != 0)
+{
+m++;
+}
+return (m);
 }
