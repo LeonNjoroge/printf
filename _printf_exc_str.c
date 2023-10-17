@@ -29,7 +29,7 @@ int print_exc_str(va_list val)
 	      _putchar('0');
 	      size++;
 	    }
-	  size = size + print_HEX_ext(arg);
+	  size = size + printf_HEX_ext(arg);
 	}
       else
 	{
