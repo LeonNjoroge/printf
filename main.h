@@ -27,5 +27,7 @@ int print_exc_str(va_list val);
 int printf_hex_ext(unsinged long int num);
 int printstr_rev(va_list args);
 int print_rot13(va_list args);
+int print_pointer(va_list val);
+
 
 #endif
