@@ -1,60 +1,45 @@
 #include "main.h"
-
 /**
- * _printf - is a function that selects the correct function to print.
- * @format: identifier to look for.
- * Return: the length of the string.
+ * _printf - this is a function that chooses the right function to be printed.
+ * @format: it is an identifier that is used to search.
+ * Return: the length and number of characters in the string.
  */
-int _printf(const char *format, ...)
+int _printf(const char * const format, ...)
 {
+	convert_match m[] = {
+		{"%s", _printfstring}, {"%c", _printfchar},
+		{"%%", _printf37},
+		{"%i", _printfint}, {"%d", _printfdec}, {"%r", _printfsrev},
+		{"%R", _printfrot13}, {"%b", _printfbin}, {"%u", _printfunsigned},
+		{"%o", _printfoct}, {"%x", _printf_hex}, {"%X", _printfHEX},
+		{"%S", _printfexclusivestring}, {"%p", _printfpointer}
+	};
+
 	va_list args;
+	int c = 0, j, len = 0;
+
 	va_start(args, format);
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+		return (-1);
 
-	int length = 0;
-	char current_char;
-
-	while ((current_char = *format) != '\0')
+Here:
+	while (format[c] != '\0')
 	{
-		if (current_char == '%')
+		j = 13;
+		while (j >= 0)
 		{
-			char next_char = *(format + 1);
-
-			switch (next_char)
+			if (m[j].id[0] == format[c] && m[j].id[1] == format[c + 1])
 			{
-				case 'd':
-					length += printf("%d", va_arg(args, int));
-					break;
-				case 's':
-					length += printf("%s", va_arg(args, char *));
-					break;
-				case 'c':
-					length += printf("%c", va_arg(args, int));
-					break;
-				case '%':
-					length += putchar('%');
-					break;
-				default:
-					length += putchar(current_char);
-					break;
+				len += m[j].f(args);
+				c = c + 2;
+				goto Here;
 			}
-
-			format++;
+			j--;
 		}
-		else
-		{
-			length += putchar(current_char);
-		}
-
-		format++;
+		_putchar(format[c]);
+		len++;
+		c++;
 	}
-
 	va_end(args);
-	return (length);
+	return (len);
 }
-
-int main(void)
-{
-	_printf("This is a test: %d, %s, %c, %%\n", 42, "Hello, World!", 'A');
-	return (0);
-}
-
