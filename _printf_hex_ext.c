@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * printf_hex_ext - Custom printf function to print an unsigned long hexadecimal number.
+ * @num: The unsigned long integer to be printed in hexadecimal.
+ *
+ * Return: Number of characters printed.
+ */
 
 int printf_hex_ext(unsinged long int num)
 {

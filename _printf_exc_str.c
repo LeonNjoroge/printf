@@ -1,6 +1,11 @@
 #include "main.h"
 
-
+/**
+ * print_exc_str - Custom printf function to print a string with escape sequences for non-printable characters.
+ * @val: Argument list containing the string to be printed
+ *
+ * Return: Number of characters printed, including escape sequences.
+ */
 
 int print_exc_str(va_list val)
 {

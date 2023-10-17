@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * printf_hex - Custom printf function to print an unsigned hexadecimal number.
+ * @val: Argument list containing the value to be printed
+ *
+ * Return: Number of characters printed.
+ */
+
 int printf_hex(va_list val)
 {
   int m, cont = 0, *arr;

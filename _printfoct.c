@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * printf_oct - Custom printf function to print an unsigned octal number.
+ * @val: Argument list containing the value to be printed
+ *
+ * Return: Number of characters printed.
+ */
+
 int printf_oct(va_list val)
 {
   int m, cont = 0, *arr;

@@ -1,6 +1,14 @@
 #include "main.h"
 
 
+/**
+ * print_rot13 - Custom printf function to print a string encoded in ROT13.
+ * @args: Argument list containing the string to be printed in ROT13.
+ *
+ * Return: Number of characters printed.
+ */
+
+
 int print_rot13(va_list args)
 {
   int m, n, cont = 0, l = 0;

@@ -1,6 +1,13 @@
 #include "main.h"
 
 
+/**
+ * print_pointer - Custom printf function to print a pointer address in hexadecimal format.
+ * @val: Argument list containing the pointer to be printed
+ *
+ * Return: Number of characters printed.
+ */
+
 int print_pointer(va_list val)
 {
   void *point;

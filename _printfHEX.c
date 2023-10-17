@@ -1,3 +1,12 @@
+#include "main.h"
+
+/**
+ * printf_HEX - Custom printf function to print hexadecimal numbers
+ * @val: Argument list containing the value to be printed
+ *
+ * Return: Number of characters printed
+ */
+
 int printf_HEX(va_list val)
 {
   int m, cont = 0, *arr;

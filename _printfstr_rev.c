@@ -1,6 +1,13 @@
 #include "main.h"
 
 
+/**
+ * printstr_rev - Custom printf function to print a string in reverse.
+ * @args: Argument list containing the string to be printed in reverse.
+ *
+ * Return: Number of characters printed.
+ */
+
 int printstr_rev(va_list args)
 {
   char *c = va_arg(args, char*);
