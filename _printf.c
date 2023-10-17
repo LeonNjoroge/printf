@@ -7,12 +7,12 @@
 int _printf(const char * const format, ...)
 {
 	convert_match m[] = {
-		{"%s", _printfstring}, {"%c", _printfchar},
-		{"%%", _printf37},
-		{"%i", _printfint}, {"%d", _printfdec}, {"%r", _printfsrev},
-		{"%R", _printfrot13}, {"%b", _printfbin}, {"%u", _printfunsigned},
-		{"%o", _printfoct}, {"%x", _printf_hex}, {"%X", _printfHEX},
-		{"%S", _printfexclusivestring}, {"%p", _printfpointer}
+		{"%c", printf_char}, {"%s",printf_string},
+		{"%%", print_37}, {"%i", printf_int}, 
+		{"%d", printf_dec}, {"%r", printstr_rev},
+		{"%R", print_rot13}, {"%b", printf_bin}, {"%u", printf_unsigned},
+		{"%o", printf_oct}, {"%x", printf_hex}, {"%X", printf_HEX},
+		{"%S", print_exc_str}, {"%p", print_pointer}
 	};
 
 	va_list args;
@@ -22,7 +22,6 @@ int _printf(const char * const format, ...)
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 
-Here:
 	while (format[c] != '\0')
 	{
 		j = 13;
