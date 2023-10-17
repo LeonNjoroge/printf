@@ -21,9 +21,6 @@ num /= 16;
 cont++;
 arr = malloc(cont *sizeof(long int));
 
-if (arr == NULL)
-return (NULL);
-
 m = 0;
 
 for (; m < cont; m++)

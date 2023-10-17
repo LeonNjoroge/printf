@@ -13,7 +13,7 @@ char *c = va_arg(args, char*);
 int m, n = 0;
 
 if (c == NULL)
-s = "(null)";
+c = "(null)";
 
 while (c[n] != '\0')
 n++;

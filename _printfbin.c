@@ -20,7 +20,7 @@ int printf_bin(va_list val)
 			flag = 1;
 		if (flag)
 		{
-			b = p >> (31 - i);
+			b = p >> (31 - m);
 			_putchar(b + 48);
 			cont++;
 		}

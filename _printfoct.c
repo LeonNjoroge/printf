@@ -23,8 +23,6 @@ num /= 8;
 cont++;
 arr = malloc(cont *sizeof(int));
 
-if (arr == NULL)
-return (NULL);
 
 m = 0;
 

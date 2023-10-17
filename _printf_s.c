@@ -1,11 +1,11 @@
-include "main.h"
+#include "main.h"
 /**
  * printf_string - print a string
  * @val: argument
  * Return: the number of characters and length of the string
  */
 
-int printf_string(val_list val)
+int printf_string(va_list val)
 {
 	char *str;
 	int m;
@@ -14,7 +14,7 @@ int printf_string(val_list val)
 	str = va_arg(val, char *);
 	if (str == NULL)
 	{
-		str = "(null))"
+	  str = "(null)";
 		length = _strlen(str);
 		for (m = 0; m < length; m++)
 			_putchar(str[m]);
@@ -23,7 +23,7 @@ int printf_string(val_list val)
 	else
 	{
 		length = _strlen(str);
-		for (i = 0; i < length; m++)
+		for (m = 0; m < length; m++)
 			_putchar(str[m]);
 		return (length);
 	}

@@ -1,11 +1,11 @@
-include "main.h"
+#include "main.h"
 /**
  * _strlen - gives the length of a string
  * @str: it is a pointer for strings
  * Return: m
  */
 
-int _strlen(char *str);
+int _strlen(char *str)
 {
 int m = 0;
 while (str[m] != 0)
@@ -19,7 +19,7 @@ return (m);
  * @str: it is a pointer for characters
  * Return: m
  */
-int _strlenc(const char *str);
+int _strlenc(const char *str)
 {
 int m = 0;
 
