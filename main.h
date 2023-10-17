@@ -39,7 +39,7 @@ int printf_hex(va_list val);
 int printf_HEX(va_list val);
 int printf_HEX_ext(unsigned int num);
 int print_exc_str(va_list val);
-int printf_hex_ext(unsinged long int num);
+int printf_hex_ext(unsigned long int num);
 int printstr_rev(va_list args);
 int print_rot13(va_list args);
 int print_pointer(va_list val);
